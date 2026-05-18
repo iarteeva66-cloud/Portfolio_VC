@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#0f0a14"/>
+  <rect x="60" y="80" width="320" height="36" rx="8" fill="url(#g2)"/>
+  <rect x="60" y="140" width="480" height="20" rx="5" fill="#2a2030"/>
+  <rect x="60" y="172" width="400" height="20" rx="5" fill="#2a2030"/>
+  <rect x="60" y="220" width="120" height="44" rx="22" fill="#c8ff00"/>
+  <rect x="420" y="60" width="320" height="360" rx="24" fill="url(#g2)" opacity="0.6"/>
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#c8ff00"/>
+      <stop offset="0.5" stop-color="#00e5c7"/>
+      <stop offset="1" stop-color="#ff4d6d"/>
+    </linearGradient>
+  </defs>
+  <text x="400" y="460" fill="#5c5a66" font-family="system-ui" font-size="14" text-anchor="middle">AI Creator Concept</text>
+</svg>

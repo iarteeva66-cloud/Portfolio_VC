@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#120a14"/>
+  <circle cx="400" cy="160" r="56" fill="#ff4d6d" opacity="0.35"/>
+  <rect x="280" y="240" width="240" height="20" rx="4" fill="#eceae6" opacity="0.9"/>
+  <rect x="320" y="272" width="160" height="12" rx="3" fill="#6b6b78"/>
+  <rect x="80" y="340" width="200" height="120" rx="12" fill="#1e1420" stroke="#ff4d6d" stroke-opacity="0.3"/>
+  <rect x="300" y="340" width="200" height="120" rx="12" fill="#1e1420" stroke="#ff4d6d" stroke-opacity="0.3"/>
+  <rect x="520" y="340" width="200" height="120" rx="12" fill="#1e1420" stroke="#ff4d6d" stroke-opacity="0.3"/>
+  <text x="400" y="460" fill="#5c5a66" font-family="system-ui" font-size="14" text-anchor="middle">Creative Portfolio</text>
+</svg>
