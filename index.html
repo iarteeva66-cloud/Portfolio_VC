@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Coder — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="orb orb--1" aria-hidden="true"></div>
+  <div class="orb orb--2" aria-hidden="true"></div>
+
+  <header class="header">
+    <a href="#" class="logo">VC<span>.</span></a>
+    <nav class="nav" id="nav">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Услуги</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#contact" class="header-cta">Обсудить</a>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-menu__nav">
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Услуги</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a href="#contact" class="btn btn--primary mobile-menu__cta">Обсудить задачу</a>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title" id="hero-title">
+            Я делаю сайты, интерфейсы и digital-проекты, которые выглядят как
+            вайб, а работают как система
+          </h1>
+          <p class="hero-sub hero-fade">
+            Не просто «что-то сверстать», а собрать ощущение, стиль, логику и подачу так,
+            чтобы проект хотелось открыть, листать и запомнить.
+          </p>
+          <div class="hero-actions hero-fade">
+            <a href="#projects" class="btn btn--primary">Посмотреть проекты</a>
+            <a href="#contact" class="btn btn--ghost">Обсудить задачу</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap hero-fade">
+          <div class="hero-photo-glow hero-photo-glow--back" aria-hidden="true"></div>
+          <div class="hero-photo-glow hero-photo-glow--accent" aria-hidden="true"></div>
+          <div class="hero-photo-frame">
+            <img
+              src="images/hero-photo.png"
+              alt="Ирина — vibe coder"
+              class="hero-photo"
+              width="480"
+              height="600"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <section class="section section--about" id="about">
+      <h2 class="section-title reveal">Я не просто пишу код — я собираю <em>впечатление</em></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Я работаю на стыке кода, визуала, UX и AI-инструментов.
+            Для меня сайт — это не набор блоков. Это ощущение от проекта,
+            ритм, подача, структура и то, как человек чувствует себя внутри интерфейса.
+          </p>
+          <p class="about-approach">
+            Мой подход — сделать быстро, красиво и не бездумно.
+            Чтобы проект не выглядел как очередной шаблон, собранный без вкуса и идеи.
+          </p>
+        </div>
+        <ul class="about-list" data-stagger>
+          <li>лендинги</li>
+          <li>портфолио</li>
+          <li>промо-страницы</li>
+          <li>интерфейсы</li>
+          <li>спецпроекты</li>
+          <li>digital-концепты</li>
+          <li>AI-first сайты и продукты</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2 class="section-title reveal">Что я делаю</h2>
+      <div class="cards-grid" data-stagger>
+        <article class="card">
+          <span class="card-num">01</span>
+          <h3>Лендинги</h3>
+          <p>Сайты, которые не просто «есть», а собирают внимание, держат ритм и ведут человека по смыслу.</p>
+        </article>
+        <article class="card">
+          <span class="card-num">02</span>
+          <h3>Портфолио и личные сайты</h3>
+          <p>Страницы, которые показывают не только работы, но и стиль, характер и уровень.</p>
+        </article>
+        <article class="card">
+          <span class="card-num">03</span>
+          <h3>Визуальные концепты</h3>
+          <p>Когда нужен не просто сайт, а ощущение: атмосфера, характер, настроение, подача.</p>
+        </article>
+        <article class="card">
+          <span class="card-num">04</span>
+          <h3>AI + Web</h3>
+          <p>Использую нейросети как инструмент ускорения и усиления идей, а не как замену мышлению.</p>
+        </article>
+        <article class="card">
+          <span class="card-num">05</span>
+          <h3>UX и структура</h3>
+          <p>Продумываю, как человек читает, куда смотрит, где теряется и где принимает решение.</p>
+        </article>
+        <article class="card">
+          <span class="card-num">06</span>
+          <h3>Быстрый запуск</h3>
+          <p>Могу собрать сильную первую версию быстро, без месяцев бесконечных согласований.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--approach">
+      <h2 class="section-title reveal">Как я работаю</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">01</span>
+          <div class="step-content">
+            <h3>Сначала вайб</h3>
+            <p>Я смотрю не только на задачу, но и на ощущение, которое должен передавать проект.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <div class="step-content">
+            <h3>Потом структура</h3>
+            <p>Красивый сайт без логики — это просто красивая обёртка. Поэтому я собираю смысл, сценарий и путь пользователя.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <div class="step-content">
+            <h3>Потом реализация</h3>
+            <p>Когда есть стиль и логика, проект собирается быстрее, точнее и выглядит сильно.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="section-title reveal">Избранные проекты</h2>
+      <div class="projects-list">
+        <article class="project">
+          <div class="project-visual">
+            <img src="images/projects/project-1.svg" alt="Скриншот — AI Landing Experience" loading="lazy">
+            <span class="project-tag">Лендинг</span>
+          </div>
+          <div class="project-info">
+            <h3>AI Landing Experience</h3>
+            <p>Лендинг для digital-продукта с акцентом на атмосферу, скорость восприятия и современный визуал.</p>
+            <p class="project-done"><strong>Что сделано:</strong> структура, тексты, дизайн-концепция, сборка.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-visual">
+            <img src="images/projects/project-2.svg" alt="Скриншот — Portfolio for Creative Expert" loading="lazy">
+            <span class="project-tag">Портфолио</span>
+          </div>
+          <div class="project-info">
+            <h3>Portfolio for Creative Expert</h3>
+            <p>Личный сайт-портфолио, который показывает не только кейсы, но и стиль человека.</p>
+            <p class="project-done"><strong>Что сделано:</strong> позиционирование, подача, визуальный ритм, упаковка работ.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-visual">
+            <img src="images/projects/project-3.svg" alt="Скриншот — Bot &amp; Funnel Page" loading="lazy">
+            <span class="project-tag">Воронка</span>
+          </div>
+          <div class="project-info">
+            <h3>Bot &amp; Funnel Page</h3>
+            <p>Промо-страница под воронку и digital-продукт с акцентом на конверсию и лёгкость восприятия.</p>
+            <p class="project-done"><strong>Что сделано:</strong> логика блоков, тексты, CTA, визуальный каркас.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-visual">
+            <img src="images/projects/project-4.svg" alt="Скриншот — Concept Site for AI Creator" loading="lazy">
+            <span class="project-tag">Концепт</span>
+          </div>
+          <div class="project-info">
+            <h3>Concept Site for AI Creator</h3>
+            <p>Сайт с упором на трендовую подачу, сильный первый экран и ощущение «это хочется переслать».</p>
+            <p class="project-done"><strong>Что сделано:</strong> creative direction, структура, визуальная концепция.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--why">
+      <h2 class="section-title reveal">Почему ко мне идут не просто за <em>кодом</em></h2>
+      <div class="why-grid reveal">
+        <div class="why-block">
+          <p class="why-lead">Потому что я умею видеть проект целиком.</p>
+          <div class="why-columns">
+            <div>
+              <span class="why-label">Не только</span>
+              <ul>
+                <li>как это собрать</li>
+              </ul>
+            </div>
+            <div>
+              <span class="why-label why-label--accent">но и</span>
+              <ul>
+                <li>как это подать</li>
+                <li>как это будет восприниматься</li>
+                <li>где человек зацепится взглядом</li>
+                <li>что запомнит</li>
+                <li>почему это будет выглядеть дороже, чем стоит</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="why-formula">
+          <span>Я соединяю</span>
+          <p>эстетику + структуру + digital-мышление + скорость</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--stack">
+      <h2 class="section-title reveal">Инструменты</h2>
+      <div class="badges" data-stagger>
+        <span class="badge">ChatGPT</span>
+        <span class="badge">Cursor</span>
+        <span class="badge">HTML / CSS / JS</span>
+        <span class="badge">React</span>
+        <span class="badge">Tailwind</span>
+        <span class="badge">Framer Motion</span>
+        <span class="badge">Figma</span>
+        <span class="badge">Tilda / Webflow / custom</span>
+        <span class="badge">Telegram / Bots / AI tools</span>
+      </div>
+      <p class="stack-note reveal">
+        Но если честно — главный инструмент не стек, а вкус,
+        насмотренность и умение собирать цельное впечатление.
+      </p>
+    </section>
+
+    <section class="section section--audience">
+      <h2 class="section-title reveal">Кому подойдёт моя работа</h2>
+      <ul class="audience-list" data-stagger>
+        <li>экспертам</li>
+        <li>креаторам</li>
+        <li>digital-проектам</li>
+        <li>AI-продуктам</li>
+        <li>студиям</li>
+        <li>тем, кому нужен сайт с характером</li>
+        <li>тем, кто не хочет шаблонную безликую страницу</li>
+      </ul>
+    </section>
+
+    <blockquote class="manifesto">
+      <p id="manifesto-text">
+        Хороший сайт — это не когда «нормально сверстано».
+        Это когда у проекта появляется энергия, форма и ощущение, что он живой.
+      </p>
+    </blockquote>
+
+    <section class="section section--cta" id="cta">
+      <h2 class="cta-title reveal">
+        Если тебе нужен сайт, который выглядит сильно и ощущается современно — давай соберём
+      </h2>
+      <p class="cta-text reveal reveal--delay-1">
+        Могу помочь с концепцией, структурой, упаковкой и реализацией.
+        От первого вайба до готовой страницы.
+      </p>
+      <div class="hero-actions reveal reveal--delay-2">
+        <a href="#contact" class="btn btn--primary">Написать мне</a>
+        <a href="#projects" class="btn btn--ghost">Посмотреть работы</a>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <h2 class="section-title footer-title">Контакты</h2>
+      <div class="footer-contacts">
+        <a href="https://t.me/IR1NA0081" class="contact-link" target="_blank" rel="noopener">
+          <span class="contact-label">Telegram</span>
+          <span class="contact-value">@IR1NA0081</span>
+        </a>
+        <a href="mailto:iarteeva66@gmail.com" class="contact-link">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">iarteeva66@gmail.com</span>
+        </a>
+        <a href="https://vk.com/id326058243" class="contact-link" target="_blank" rel="noopener">
+          <span class="contact-label">VK</span>
+          <span class="contact-value">id326058243</span>
+        </a>
+        <div class="contact-link contact-link--qr">
+          <span class="contact-label">MAX</span>
+          <img src="images/max-qr.png" alt="QR-код для связи в MAX" class="contact-qr" width="120" height="120">
+          <span class="contact-value contact-value--small">Сканируй QR</span>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 Vibe Coder Portfolio</p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="split-text.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
