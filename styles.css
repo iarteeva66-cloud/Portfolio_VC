@@ -762,6 +762,17 @@ main {
   gap: var(--space-lg);
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-link:focus-visible .project {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .project {
   display: grid;
   grid-template-columns: 1fr;
