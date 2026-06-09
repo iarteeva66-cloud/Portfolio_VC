@@ -197,20 +197,27 @@
             <p class="project-done"><strong>Что сделано:</strong> позиционирование, визуальный ритм, вёрстка, анимации, упаковка работ.</p>
           </div>
         </article>
-        <article class="project">
-          <div class="project-visual">
-            <img src="images/projects/project-3.svg" alt="Скриншот — Bot &amp; Funnel Page" loading="lazy">
-            <span class="project-tag">Воронка</span>
-          </div>
+        <article class="project project--app" data-app-lightbox>
+          <button type="button" class="project-visual project-visual--open project-visual--icon" aria-label="Открыть скриншоты приложения Мой ритм">
+            <img src="images/projects/moy-ritm/cover.png" alt="Мой ритм — иконка приложения" loading="lazy">
+            <span class="project-tag">Приложение</span>
+          </button>
           <div class="project-info">
-            <h3>Bot &amp; Funnel Page</h3>
-            <p>Промо-страница под воронку и digital-продукт с акцентом на конверсию и лёгкость восприятия.</p>
-            <p class="project-done"><strong>Что сделано:</strong> логика блоков, тексты, CTA, визуальный каркас.</p>
+            <h3>Мобильное приложение «Мой ритм»</h3>
+            <p>Приложение для баланса между работой, спортом, домом, обучением и личной жизнью.</p>
+            <p class="project-done"><strong>Что сделано:</strong> выбор темы, настройка под себя, добавление и удаление блоков, push-уведомления, работа без интернета.</p>
+            <button type="button" class="btn btn--primary btn--sm" data-app-lightbox-open>Посмотреть</button>
+          </div>
+          <div class="app-lightbox-images" hidden aria-hidden="true">
+            <span data-src="images/projects/moy-ritm/02-task.png" data-alt="Мой ритм — новая задача"></span>
+            <span data-src="images/projects/moy-ritm/05-home.png" data-alt="Мой ритм — главный экран"></span>
+            <span data-src="images/projects/moy-ritm/04-categories.png" data-alt="Мой ритм — категории"></span>
+            <span data-src="images/projects/moy-ritm/03-settings.png" data-alt="Мой ритм — настройки"></span>
           </div>
         </article>
         <article class="project">
           <div class="project-visual">
-            <img src="images/projects/project-4.svg" alt="Скриншот — Concept Site for AI Creator" loading="lazy">
+            <img src="images/projects/ai-creator-concept.png" alt="Скриншот — Concept Site for AI Creator" loading="lazy">
             <span class="project-tag">Концепт</span>
           </div>
           <div class="project-info">
@@ -330,6 +337,17 @@
       <p class="footer-copy">© 2026 Vibe Coder Portfolio</p>
     </footer>
   </main>
+
+  <div class="app-lightbox" id="app-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Скриншоты приложения">
+    <button type="button" class="app-lightbox__close" aria-label="Закрыть">&times;</button>
+    <button type="button" class="app-lightbox__nav app-lightbox__nav--prev" aria-label="Предыдущий скриншот">&#8249;</button>
+    <figure class="app-lightbox__figure">
+      <img class="app-lightbox__img" src="" alt="">
+      <figcaption class="app-lightbox__caption"></figcaption>
+    </figure>
+    <button type="button" class="app-lightbox__nav app-lightbox__nav--next" aria-label="Следующий скриншот">&#8250;</button>
+    <div class="app-lightbox__dots" role="tablist"></div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>

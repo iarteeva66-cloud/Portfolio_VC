@@ -297,7 +297,7 @@
   function initMagneticButtons() {
     if (prefersReducedMotion || !window.matchMedia("(pointer: fine)").matches) return;
 
-    document.querySelectorAll(".btn--primary, .header-cta").forEach((btn) => {
+    document.querySelectorAll(".btn--primary:not([data-app-lightbox-open]), .header-cta").forEach((btn) => {
       const strength = 14;
 
       btn.addEventListener("mousemove", (e) => {
@@ -318,6 +318,87 @@
     });
   }
 
+  /* ─── App lightbox (Мой ритм) ─── */
+  function initAppLightbox() {
+    const modal = document.getElementById("app-lightbox");
+    const project = document.querySelector("[data-app-lightbox]");
+    if (!modal || !project) return;
+
+    const openBtn = project.querySelector(".project-visual--open");
+    const template = project.querySelector(".app-lightbox-images");
+    const imgEl = modal.querySelector(".app-lightbox__img");
+    const captionEl = modal.querySelector(".app-lightbox__caption");
+    const dotsEl = modal.querySelector(".app-lightbox__dots");
+    const closeBtn = modal.querySelector(".app-lightbox__close");
+    const prevBtn = modal.querySelector(".app-lightbox__nav--prev");
+    const nextBtn = modal.querySelector(".app-lightbox__nav--next");
+
+    if (!openBtn || !template || !imgEl) return;
+
+    const slideRoot = template.content || template;
+    const slides = Array.from(slideRoot.querySelectorAll("[data-src]")).map((el) => ({
+      src: el.dataset.src,
+      alt: el.dataset.alt || ""
+    }));
+    if (!slides.length) return;
+
+    let index = 0;
+
+    function renderDots() {
+      dotsEl.innerHTML = "";
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "app-lightbox__dot" + (i === index ? " is-active" : "");
+        dot.setAttribute("aria-label", `Скриншот ${i + 1}`);
+        dot.addEventListener("click", () => show(i));
+        dotsEl.appendChild(dot);
+      });
+    }
+
+    function show(i) {
+      index = (i + slides.length) % slides.length;
+      imgEl.src = slides[index].src;
+      imgEl.alt = slides[index].alt;
+      captionEl.textContent = slides[index].alt;
+      renderDots();
+    }
+
+    function open(e) {
+      e?.preventDefault?.();
+      e?.stopPropagation?.();
+      show(0);
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("lightbox-open");
+      closeBtn.focus();
+    }
+
+    function close() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("lightbox-open");
+      openBtn.focus();
+    }
+
+    openBtn.addEventListener("click", open);
+    project.querySelector("[data-app-lightbox-open]")?.addEventListener("click", open);
+    closeBtn.addEventListener("click", close);
+    prevBtn.addEventListener("click", () => show(index - 1));
+    nextBtn.addEventListener("click", () => show(index + 1));
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) close();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (!modal.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(index - 1);
+      if (e.key === "ArrowRight") show(index + 1);
+    });
+  }
+
   /* ─── Init all motion ─── */
   initHero();
   initScrollProgress();
@@ -327,6 +408,7 @@
   initProjects();
   initSteps();
   initManifesto();
+  initAppLightbox();
   if (hasGsap) initMagneticButtons();
 
   /* ─── Mobile menu ─── */
